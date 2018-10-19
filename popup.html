@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body
+      {
+        width: 200px;
+        left:0px;
+        top:0px;
+        bottom: 0px;
+        right: 0px;
+        padding: 0px;
+        margin: 4px;
+      }
+      #expandVideo {
+        height: 30px;
+        width: 30px;
+        outline: none;
+        
+      }
+      #currentVideoOptions {
+        background-color: #0071d9;
+        border-radius: 4px;
+        width: 98%;
+        margin: 2px;
+        text-align: center;
+        padding-bottom: 4pt;
+        padding-top: 4pt;
+        cursor: pointer;
+        color:#fff;
+      }
+      .divTable{
+        display: table;
+        width: 100%;
+      }
+      .divTableRow {
+        display: table-row;
+        margin-top: 5px;
+      }
+      .divTableCell {
+        display: table-cell;
+        vertical-align: middle;
+        height: 24px;
+        padding-top: 4px;
+      }
+      .divTableBody {
+        display: table-row-group;
+      }
+      .divTable img
+      {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+      }
+      .scoreWinning
+      {
+        background-color: lightgreen;
+        border-radius: 5px;
+        height: 50px;
+        height: 100%;
+        display:block;
+        overflow: none;
+      }
+      .timeInGame
+      {
+        color: #666666;
+        padding-left: 10px;
+      }
+      #scoreboardCalendar
+      {
+        background: #1d428a;
+        color: #fff;
+        width: 98%;
+        text-align: center;
+        margin: 2px;
+        border-radius: 4px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+      #scoreboardDate
+      {
+        width: 100%;
+        text-align: center;
+      }
+      #scoreboardDateNext, #scoreboardDatePrevious
+      {
+        cursor: pointer;
+      }
+      #scoreboardDateNext img, #scoreboardDatePrevious img
+      {
+        height: 16px;
+        fill:white;
+      }
+      .watchLive
+      {
+        background-color: #0071d9;
+        border-radius: 4px;
+        padding:6px;
+        vertical-align: middle;
+      }
+      .watchReplay
+      {
+        background-color: #ccc;
+        border-radius: 4px;
+        padding:4px;
+        vertical-align: middle;
+      }
+      .watchLive a:link, .watchLive a:visited
+      {
+        color: white;
+      }
+      .vertical-align {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="currentVideoOptions">
+      <span id="expandVideo">
+      Fill Screen with Video
+      </span>
+    </section>
+    <section id="scoreboardSection">
+      <div id="scoreboardCalendar" class="divTable">
+        <div id="scoreboardDatePrevious" class="divTableCell"><img src="images/back.svg" /></div>
+        <div class="divTableCell">
+          <span id="scoreboardDate" ></span>
+        </div>
+        <div id="scoreboardDateNext" class="divTableCell"><img src="images/next.svg" /></div>
+      </div>
+      <span id="scoreboard"></span>
+    </section>
+    <script src="popup.js"></script>
+  </body>
+</html>
