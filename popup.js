@@ -74,8 +74,8 @@ function loadScoreboard(scoreboardDate)
         var scoreHClass ="";
         var scoreVClass ="";
 
-        var scoreH = sb.games[g].hTeam.score;
-        var scoreV = sb.games[g].vTeam.score;
+        var scoreH = parseInt(sb.games[g].hTeam.score);
+        var scoreV = parseInt(sb.games[g].vTeam.score);
 
         if(gameState === GameStateEnum.NotStarted)
         {
@@ -103,17 +103,17 @@ function loadScoreboard(scoreboardDate)
           timeString = '<a href="https://www.nba.com/games/' +dateFormatted+ '/' + sb.games[g].vTeam.triCode + sb.games[g].hTeam.triCode +'?ss=watch#/matchup">Final</a>';
         }
 
-        if(sb.games[g].hTeam.score == sb.games[g].vTeam.score)
+        if(scoreH == scoreV)
         {
           //tie
           var scoreHClass = "scoreTie";
           var scoreVClass = "scoreTie";
-        } else if (sb.games[g].hTeam.score > sb.games[g].vTeam.score)
+        } else if (scoreH > scoreV)
         {
           //home winning
           var scoreHClass = "scoreWinning";
           var scoreVClass = "scoreLosing";
-        } else if (sb.games[g].hTeam.score < sb.games[g].vTeam.score)
+        } else if (scoreH < scoreV)
         {
           //visitor winning
           var scoreHClass = "scoreLosing";
